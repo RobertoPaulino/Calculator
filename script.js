@@ -16,13 +16,14 @@ function divide(num1, num2){
 
 function update(){
     previewDiv.textContent = (num1 + operator + num2);
+    resultDiv.textContent = result;
 }
 
 
 let operator = "";
 let num1 = "";
 let num2 = "";
-let result = 0;
+let result = "";
 let operationString = "";
 let isNumberOneSet = false;
 
@@ -137,11 +138,48 @@ btnZero.addEventListener('click', function(e) {
 });
 
 btnEquals.addEventListener('click', function(e) {
+    switch(operator){
+        case "+":
+            result = addition(parseInt(num1), parseInt(num2));
+            update();
+            break;
+        case "-":
+            result = substraction(parseInt(num1), parseInt(num2));
+            update();
+            break;
+        case "/":
+            result = divide(parseInt(num1), parseInt(num2));
+            update();
+            break;
+        case "x":
+            result = multiplication(parseInt(num1), parseInt(num2));
+            update();
+            break;
+    }
+    
     
 });
 
 btnPlus.addEventListener('click', function(e){
     operator = "+";
+    isNumberOneSet = true;
+    update()
+});
+
+btnMinus.addEventListener('click', function(e){
+    operator = "-";
+    isNumberOneSet = true;
+    update()
+});
+
+btnDivide.addEventListener('click', function(e){
+    operator = "/";
+    isNumberOneSet = true;
+    update()
+});
+
+btnMultiply.addEventListener('click', function(e){
+    operator = "x";
     isNumberOneSet = true;
     update()
 });
