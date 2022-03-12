@@ -5,6 +5,8 @@ body {
     align-items: center;
     justify-items: center;
 
+    background-color:  lightgray;
+
 }
 
 .container {
@@ -14,23 +16,24 @@ body {
     width: 500px;
     height: 500px;
     border-radius: 14px;
-
-
     align-items: center;
+
+    border: 5px solid rgb(90, 90, 90);
     
 }
 
 .result {
     margin-top: 30px;
-    
     width: 400px;
     height: 100px;
-    background-color: white;
+    background-color: rgba(224, 255, 255, 0.623);
     border-radius: 5px;
+
+    border: 5px solid rgb(78, 78, 78);
 }
 
 .button-container {
-    margin-top: 30px;
+    margin-top: 50px;
     height: 300px;
     width: 400px;
     display: flex;
@@ -40,11 +43,15 @@ body {
 }
 
 .button {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     margin: 10px;
+    font-weight: 700;
+    background-color: lightgrey;
+    border-radius: 5px;
+    border: 3px solid rgb(82, 71, 71);
 }
 
 #zero {
-    width: 120px;
+    width: 140px;
 }
